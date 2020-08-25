@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Med-Tracker</title>
+</head>
+
+<header>Med-Tracker</header>
+
+<body>
+    <main>
+        <div class="container3">
+            <div class="today">
+                <h2 id="currentDay" class="lead">Date</h2>
+                <!-- will have calendar date -->
+            </div>
+        </div>
+
+        <div class="container intro">
+            <h2>Instructions</h2>
+            <ul>
+                <li>Enter a name of a medication and Submit</li>
+                <li>Toggle between medication info by clicking medication button</li>
+                <li>Open and close medication info by clicking on each category</li>
+                <li>Delete a medication by clicking the X button</li>
+            </ul>
+            <!-- <p>
+                This app is designed to keep track of the medications you're taking, both prescription and
+                over-the-counter. Add the name of your medications one at a time on the left and click submit or hit
+                Enter. This will allow the app to keep track of them for you. It will also provide you with the use
+                instructions for the medication and offer the FDA warnings and possible side effects. This information
+                shown or hidden by clicking on the name of the section (Usage, Side Effects, Warning). You will able 
+                to toggle through this information for all of your medications by clicking on the button with the name of
+                the medication. You can remove any medication you want at any time by clicking the delete (X) button.
+            </p> -->
+        </div>
+        <div class="container2">
+            <div>
+                <input type="checkbox" readonly="readonly" id="agreeWithDisclaimer"> I agree with the DISCLAIMER.</input>
+            </div>
+            <div>
+                <input id="medInput" class="medinput" type="text" onfocus="this.value=''"
+                    placeholder="Enter medication here..." />
+            </div>
+            <div>
+                <button id="submitMeds" class="button" type="button">Submit</button>
+            </div>
+            <div id="medDisplay"></div>
+        </div>
+        <br>
+
+        <div class=med-display>
+            <div class="usage"></div>
+            <br>
+            <div class="reactions"></div>
+            <br>
+            <div class="warning"></div>
+            <!-- make list from JS -->
+        </div>
+
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
